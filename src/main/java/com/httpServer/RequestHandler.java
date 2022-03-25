@@ -81,6 +81,8 @@ public class RequestHandler implements Runnable{
                     System.out.println(accessLog);
 
 
+
+
                 }catch(Exception e){
                     System.out.println(e.getMessage());
                 }

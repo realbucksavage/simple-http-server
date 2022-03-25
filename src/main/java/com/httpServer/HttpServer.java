@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Properties;
 
 public class HttpServer {
 
@@ -39,7 +40,7 @@ public class HttpServer {
     }
 
     public static void main(String[] args) throws IOException {
-        ServerSocket serverSocket = new ServerSocket(6666);
+        ServerSocket serverSocket = new ServerSocket(Integer.parseInt(ServerProperties.getServerProperties().getProperty("port")));
         HttpServer httpServer = new HttpServer(serverSocket);
         httpServer.startServer();
 

@@ -1,0 +1,30 @@
+*****************      SarvikaServer   *******************
+
+**Server Class:
+
+1-Start the server at given port and keep listening on port
+2-If any client gets connected then send the socket to RequestHandler and then start the thread for that request and socket.
+
+**Request Handler Class:
+
+1-Gets the client request and parses the request accordingly.
+2-And call the Request Handler.
+3-If a request is completed then closes the client socket.
+
+**Resource Handler Class:
+
+1-This class have the Get method and it proceed the request on that.
+
+**InputOutputStream Handler Class:
+
+1-This class have the Path to all the resource.
+2-The requested resource is checked it available or not
+3-Data is sent to client with responce code/Status.
+
+**ServerProperties Class
+
+1-This Class will provide server relates variable values like Which port and working directory server has to work on.
+
+**Config.properties 
+
+1-Data for Server variable use.
